@@ -1,9 +1,63 @@
 <h2><%= link_to "Add a Job", new_job_path %></h2>
 
-<h1>Your jobs!</h1>
 
-<ul>
-<% @jobs.each do |job| %>
-  <li><%= link_to job.title, job_path(job) %></li>
-<% end %>
-</ul>
+  <h2>Your possible jobs</h2>
+  <p>You haven't applied to any of these positions yet, or started work on applications.</p>
+  <% @jobs.each do |job| %>
+    <ul>
+      <% if job.is_status?("possible") %>
+      <li><%= link_to job.title, job_path(job) %></li>
+      <% end %>
+    </ul>
+   <% end %>
+
+  <h2>Applications you're working on</h2>
+  <p>You're working on applications for these jobs</p>
+  <% @jobs.each do |job| %>
+    <ul>
+      <% if job.is_status?("preparing") %>
+      <li><%= link_to job.title, job_path(job) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <h2>Applications you've submitted</h2>
+  <p>These are the jobs you've applied for.</p>
+  <% @jobs.each do |job| %>
+    <ul>
+      <% if job.is_status?("submitted") %>
+      <li><%= link_to job.title, job_path(job) %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+
+  <h2>Applications that have landed you an interview</h2>
+  <p>Interview!!! Amazing.</p>
+  <% @jobs.each do |job| %>
+    <ul>
+      <% if job.is_status?("interviewing") %>
+      <li><%= link_to job.title, job_path(job) %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <h2>Jobs you've been offered</h2>
+  <p>Well done.</p>
+  <% @jobs.each do |job| %>
+    <ul>
+      <% if job.is_status?("offered") %>
+      <li><%= link_to job.title, job_path(job) %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <h2>Jobs you haven't been offered</h2>
+  <p>Rejection is tough, but you've got this.</p>
+  <% @jobs.each do |job| %>
+    <ul>
+      <% if job.is_status?("rejected") %>
+      <li><%= link_to job.title, job_path(job) %></li>
+    <% end %>
+    </ul>
+  <% end %>
