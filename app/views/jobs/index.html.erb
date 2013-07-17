@@ -4,6 +4,6 @@
 
 <ul>
 <% @jobs.each do |job| %>
-  <li><%= job.title %></li>
+  <li><%= link_to job.title, job_path(job) %></li>
 <% end %>
 </ul>
