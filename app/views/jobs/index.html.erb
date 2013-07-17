@@ -1,1 +1,7 @@
-<h1>This is a jobs index page.</h1>
+<h1>Your jobs!</h1>
+
+<ul>
+<% @jobs.each do |job| %>
+  <li><%= job.title %></li>
+<% end %>
+</ul>
