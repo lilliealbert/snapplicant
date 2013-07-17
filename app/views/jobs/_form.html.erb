@@ -1,0 +1,15 @@
+<div class="job-form">
+  <%= form_for @job do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+    <%= f.label :source_url, "Source URL" %>
+    <%= f.text_field :source_url %>
+    <%= f.label :description %>
+    <%= f.text_area :description, size: '60x20' %>
+    <%= f.label :notes %>
+    <%= f.text_area :notes, size: '60x20' %>
+    <%= f.submit class: 'submit-button' %>
+  <% end %>
+</div>
