@@ -1,7 +1,8 @@
 <h2><%= link_to "Add a Job", new_job_path %></h2>
 
+  <h1>Active Jobs</h1>
 
-  <h2>Your possible jobs</h2>
+  <h2>Possibilities</h2>
   <p>You haven't applied to any of these positions yet, or started work on applications.</p>
   <% @jobs.each do |job| %>
     <ul>
@@ -11,7 +12,7 @@
     </ul>
    <% end %>
 
-  <h2>Applications you're working on</h2>
+  <h2>Preparing</h2>
   <p>You're working on applications for these jobs</p>
   <% @jobs.each do |job| %>
     <ul>
@@ -21,7 +22,7 @@
     </ul>
   <% end %>
 
-  <h2>Applications you've submitted</h2>
+  <h2>Submitted</h2>
   <p>These are the jobs you've applied for.</p>
   <% @jobs.each do |job| %>
     <ul>
@@ -32,7 +33,7 @@
   <% end %>
 
 
-  <h2>Applications that have landed you an interview</h2>
+  <h2>Interviewing</h2>
   <p>Interview!!! Amazing.</p>
   <% @jobs.each do |job| %>
     <ul>
@@ -42,7 +43,7 @@
     </ul>
   <% end %>
 
-  <h2>Jobs you've been offered</h2>
+  <h2>Offers</h2>
   <p>Well done.</p>
   <% @jobs.each do |job| %>
     <ul>
@@ -52,7 +53,7 @@
     </ul>
   <% end %>
 
-  <h2>Jobs you haven't been offered</h2>
+  <h2>Rejections</h2>
   <p>Rejection is tough, but you've got this.</p>
   <% @jobs.each do |job| %>
     <ul>
