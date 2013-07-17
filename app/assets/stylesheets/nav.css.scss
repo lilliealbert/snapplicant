@@ -1,0 +1,39 @@
+nav {
+  height: 50px;
+  background-color: rgb(25, 187, 201);
+  margin: none;
+  padding: 0 15px;
+  font-family: 'Special Elite', Verdana, sans-serif;
+  h1 {
+    margin: 0;
+    padding: 5px;
+    font-size: 2em;
+    line-height: 1.4em;
+    float: left;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: rgb(31, 10, 75);
+    }
+  }
+}
+
+.nav-links {
+  padding-right: 5px;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 2em;
+  float: right;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    font-size: 1em;
+    display: inline;
+    padding-left: 20px;
+  }
+}
