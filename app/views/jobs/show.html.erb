@@ -6,9 +6,9 @@
 <h3>Status: <%= @job.status %></h3>
 
 <h2>Description</h2>
-<p><%= @job.description %></p>
+<%= markdown(@job.description) %>
 
 <h2>Notes</h2>
-<p><%= @job.notes %></p>
+<%= markdown(@job.notes) %>
 
 <%= button_to "Update Job", edit_job_path(@job), method: 'get' %>
