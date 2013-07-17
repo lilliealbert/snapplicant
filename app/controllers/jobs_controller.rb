@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = current_user.jobs
+    @active_jobs = current_user.jobs.where(archived: false)
   end
 
   def new
@@ -18,6 +18,10 @@ class JobsController < ApplicationController
       flash.now[:errors] = @job.errors.full_messages
       render :new
     end
+  end
+
+  def archived
+    @archived_jobs = current_user.jobs.where(archived: true)
   end
 
   def show

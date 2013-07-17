@@ -1,6 +1,9 @@
 Snapplicator::Application.routes.draw do
 
   devise_for :users
+
+  match 'jobs/archived' => 'jobs#archived', as: :archived
+
   resources :jobs
 
   root :to => 'jobs#index'
