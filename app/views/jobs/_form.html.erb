@@ -12,9 +12,9 @@
     <%= f.text_area :notes, size: '60x20' %>
     <% unless @job.new_record? %>
       <%= f.label "Job Status" %>
-      <%= f.select :status, options_for_select(Job.statuses) %>      
+      <%= f.select :status, options_for_select(Job.statuses, selected: @job.status) %>
       <%= f.label "Archived?" %>
-      <%= f.select :archived, options_for_select([true, false]) %>
+      <%= f.select :archived, options_for_select([true, false], selected: @job.archived) %>
     <% end %>
     <%= f.submit class: 'submit-button' %>
   <% end %>
