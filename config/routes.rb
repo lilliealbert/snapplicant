@@ -2,7 +2,7 @@ Snapplicator::Application.routes.draw do
 
   devise_for :users
 
-  root :to => 'users#index'
+  root :to => 'jobs#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
