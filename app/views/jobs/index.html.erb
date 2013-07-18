@@ -8,7 +8,7 @@
   <% @active_jobs.each do |job| %>
     <ul>
       <% if job.is_status?("possible") %>
-      <li><%= link_to job.title, job_path(job) %></li>
+      <li><%= link_to job.title, job_path(job) %> at <%= job.company %></li>
       <% end %>
     </ul>
    <% end %>

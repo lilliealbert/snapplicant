@@ -1,7 +1,7 @@
 <h2>
-  <%= @job.title %><% if @job.archived %> (archived)<% end %>
+  <%= @job.title %> at <%= @job.company %><% if @job.archived %> (archived)<% end %>
 </h2>
-<h3><%= @job.company %></h3>
+
 <h3><a href="<%= @job.source_url %>">Original Listing</a></h3>
 <h3>Status: <%= @job.status %></h3>
 
